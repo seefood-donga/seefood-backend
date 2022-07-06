@@ -1,0 +1,4 @@
+[submodule "seefood-backend-submodule"]
+	path = seefood-backend-submodule
+	url = https://github.com/seefood-donga/seefood-backend-submodule
+    branch = main
