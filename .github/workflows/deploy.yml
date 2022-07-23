@@ -68,7 +68,8 @@ jobs:
         run: |
           aws deploy create-deployment \
           --application-name seefood-deploy \
+          --deployment-config-name CodeDeployDefault.AllAtOnce \
           --deployment-group-name prod \
           --file-exists-behavior OVERWRITE \
-          --s3-location bucket=seefood-deploy,bundleType=zip,key=$GITHUB_SHA.zip \
-          --region ap-northeast-2
+          --s3-location bucket=seefood-deploy,bundleType=zip,key=seefood-backend/$GITHUB_SHA.zip \
+          --region ap-northeast-2 \
